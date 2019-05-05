@@ -10,7 +10,7 @@ handlers:
 - url: /images
   static_dir: static/images
 - url: /.*
-  script: rock-paper-scissors.application
+  script: auto
 
 - url: /.*
   secure: always
