@@ -1,6 +1,6 @@
 runtime: python
 env: flex
-entrypoint: gunicorn -b :$PORT index:app
+entrypoint: gunicorn -b :$PORT rock-paper-scissors:app
 instance_class: F2
 runtime_config:
   python_version: 3
