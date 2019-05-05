@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Juego Piedra Papel Tijera!</title>
+
+	<link href="../static/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+	<script language="JavaScript" type="text/javascript" src="../static/js/jquery-3.4.0.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="showEstadisticas#">Estadisticas</a></li>
+            <li role="presentation" class="active"><a href="showIndex#">Desconectarse</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Juego Piedra Papel Tijera!</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Un jugador</h1>
+        <h3 class="text-muted">Piedra,Papel o Tijera?</h3>
+        <form class="form-signin">
+
+
+          <select name="opcion" class="mdb-select md-form">
+            <option value="" disabled selected>Selecciona tu opcion</option>
+            <option value="Piedra" data-icon="../Fotos/piedra.jpg" class="rounded-circle">
+            Piedra
+            </option>
+            <option value="Papel" data-icon="../Fotos/papel.jpg" class="rounded-circle">
+            Papel
+            </option>
+            <option value="Tijera" data-icon="../Fotos/Tijera.jpg" class="rounded-circle">
+            Tijera
+            </option>
+            </select>
+        </form>
+      <form class="form-signin">
+        <button id="btnUnjugadorResultado" class="btn btn-lg btn-primary btn-block" type="button">Jugar!</button>
+      </form>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; Paulius Mitka 2019</p>
+      </footer>
+    </div>
+	<script>
+$(function() {
+    $('#btnUnjugadorResultado').click(function() {
+        $.ajax({
+            url: '/Unjugador',
+            data: $('form').serialize(),
+            type: 'POST',
+            success:function(response){ document.write(response);
+            },
+            error: function(error) {
+                document.write(error);
+            }
+        });
+    });
+});
+</script>
+  </body>
+</html>
