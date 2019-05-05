@@ -3,8 +3,14 @@ runtime: python37
 instance_class: F2
 
 env_variables:
-  BUCKET_NAME: "piedrapapeltijera"
-
+    # Replace user, password, database, and instance connection name with the values obtained
+    # when configuring your Cloud SQL instance.
+    SQLALCHEMY_DATABASE_URI: >-
+     mysql+pymysql://root:1234@/bucketlist?unix_socket=/cloudsql/piedrapapeltijera:europe-west6:bucketlist
+    # Replace project and instance with the values obtained  when configuring your
+    # Cloud SQL instance.
+beta_settings:
+    cloud_sql_instances: piedrapapeltijera:europe-west6:bucketlist
 handlers:
 # Matches requests to /images/... to files in static/images/...
 - url: /images
