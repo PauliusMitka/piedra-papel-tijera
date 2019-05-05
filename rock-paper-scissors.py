@@ -12,9 +12,9 @@ mysql = MySQL()
 
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'BucketList'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_PASSWORD'] = '1234'
+app.config['MYSQL_DATABASE_DB'] = 'bucketlist'
+app.config['MYSQL_DATABASE_HOST'] = 'piedrapapeltijera:europe-west6:bucketlist'
 mysql.init_app(app)
 
 
@@ -302,4 +302,4 @@ def Multijugador():
     return render_template('MultijugadorResultado.html', Resultado1=mensaje1, Resultado2=mensaje)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="34.65.92.247", port=3306)
