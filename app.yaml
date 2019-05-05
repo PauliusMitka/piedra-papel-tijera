@@ -10,7 +10,7 @@ env_variables:
     # Replace project and instance with the values obtained  when configuring your
     # Cloud SQL instance.
 beta_settings:
-    cloud_sql_instances: piedrapapeltijera:europe-west6:bucketlist
+    cloud_sql_instances: "mysql:host=0.0.0.0;port=8080;dbname=bucketlist;"
 handlers:
 # Matches requests to /images/... to files in static/images/...
 - url: /images
