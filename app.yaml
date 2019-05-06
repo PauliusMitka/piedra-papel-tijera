@@ -10,14 +10,14 @@ env_variables:
     # Replace user, password, database, and instance connection name with the values obtained
     # when configuring your Cloud SQL instance.
     SQLALCHEMY_DATABASE_URI: >-
-     mysql+pymysql://root:1234@/bucketlist?unix_socket=/cloudsql/localhost
+     mysql+pymysql://root:1234@/bucketlist?unix_socket=/cloudsql/piedrapapeltijera:europe-west6:bucketlist
  #[END gae_flex_mysql_env]
  
  #[START gae_flex_mysql_settings]
     # Replace project and instance with the values obtained  when configuring your
     # Cloud SQL instance.
 beta_settings:
-    cloud_sql_instances: localhost
+    cloud_sql_instances: piedrapapeltijera:europe-west6:bucketlist
 #[END gae_flex_mysql_settings]
 handlers:
 
